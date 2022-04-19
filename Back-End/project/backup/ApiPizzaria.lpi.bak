@@ -139,6 +139,9 @@
       <Item>
         <Name Value="EResNotFound"/>
       </Item>
+      <Item>
+        <Name Value="EMSError"/>
+      </Item>
     </Exceptions>
   </Debugging>
 </CONFIG>

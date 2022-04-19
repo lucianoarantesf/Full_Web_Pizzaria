@@ -37,7 +37,7 @@ implementation
 
 procedure TServicesPizzas.DataModuleCreate(Sender: TObject);
 begin
-    vProviders := TProvidersConnection.Create(Nil);
+    vProviders := TProviderConnection.Create(Nil);
     vProviders.dbsConnection.Connected := True;
     qryPizzas.Connection := vProviders.dbsConnection;
 end;

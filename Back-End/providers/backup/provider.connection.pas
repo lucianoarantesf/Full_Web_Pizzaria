@@ -4,7 +4,7 @@ unit provider.connection;
 interface
 
 uses
-  Classes, SysUtils, Uni, SQLServerUniProvider, MySQLUniProvider,ActiveX;
+  Classes, SysUtils, Uni, SQLServerUniProvider,ActiveX;
 
 type
 

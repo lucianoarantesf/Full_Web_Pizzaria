@@ -9,7 +9,7 @@ object ServicesPizzas: TServicesPizzas
   object qryPizzas: TUniQuery
     Connection = ProviderConnection.dbsConnection
     SQL.Strings = (
-      'SELECT ID,TITLE,PIZZA,VALOR,DETALHE FROM PIZZAS'
+      'SELECT ID,TAG_ID,TITLE,PIZZA,VALOR,DETALHE FROM PIZZAS'
       'WHERE 1 = 1'
       ''
       ''
@@ -27,7 +27,7 @@ object ServicesPizzas: TServicesPizzas
       ''
       ''
       ''
-      'ORDER BY ID'
+      'ORDER BY TAG_ID,ID'
       ''
       ''
       ''
