@@ -1,0 +1,40 @@
+
+CREATE TABLE DIARIOM
+(
+COD_LOTE_NUM						INTEGER,  
+DTMOV								DATETIME,  
+SEXO								VARCHAR(10),                                                              
+PM									FLOAT,  
+CV									FLOAT,  
+UNIF								FLOAT,                                                                          
+BONS								INTEGER,  
+INC_CAMA							INTEGER,  
+DEFEIT								INTEGER,  
+DESC_CAMA							INTEGER,  
+NINHO								INTEGER,  
+SUPER								INTEGER,  
+PEQUENO								INTEGER,                          
+TRINC								INTEGER,  
+QUEB								INTEGER,  
+AMANHA								INTEGER,  
+TOTALPRODUZIDO						INTEGER,  
+PESOMEDIOOVO						FLOAT,                                   
+COD_RACAO							INTEGER,  
+RACAO								FLOAT,                                                                       
+COD_CAUSA_OCOR_MORTE                INTEGER,  
+MORTE_OCOR_MORTE                    INTEGER,  
+ELIMINADOS_OCOR_MORTE               INTEGER,  
+DESCARTES_OCOR_MORTE                INTEGER,  
+COD_PERDA                           INTEGER,  
+QTDPERDA                            INTEGER,                                                                    
+BOX                                 INTEGER,  
+MORTE_BOX                           INTEGER,  
+ELIMINADOS_BOX                      INTEGER,  
+DESCARTES_BOX                       INTEGER,  
+STATUS                              VARCHAR(10),
+USUARIO                             VARCHAR(128),
+DTDIGIT				    DATETIME
+CONSTRAINT PK_DIARIOM PRIMARY KEY (COD_LOTE_NUM, DTMOV, SEXO)
+);
+
+
