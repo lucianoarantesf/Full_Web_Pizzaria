@@ -14,6 +14,12 @@
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <StringTable Comments="Api Pizzaria" CompanyName="Api Pizzaria" FileDescription="Api Pizzaria" ProductName="Api Pizzaria"/>
+    </VersionInfo>
     <BuildModes>
       <Item Name="Default" Default="True"/>
     </BuildModes>

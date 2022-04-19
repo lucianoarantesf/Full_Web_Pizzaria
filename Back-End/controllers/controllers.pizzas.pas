@@ -35,7 +35,7 @@ begin
           if Req.Query.ContainsKey('id') then
           begin
            vId := Req.Query.Items['id'];
-           qryPizzas.SQL.Strings[5] := 'ID = :ID';
+           qryPizzas.SQL.Strings[5] := 'AND ID = :ID';
            qryPizzas.ParamByName('ID').AsString := vId;
           end;
 

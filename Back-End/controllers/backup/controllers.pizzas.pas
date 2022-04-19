@@ -20,7 +20,8 @@ procedure getPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
 var
    LServicesPizzas     : TServicesPizzas;
    LRespJSON           : TJSONObject;
-   vId                 : String;
+   vId, LDados         : String;
+
 begin
   LRespJSON           := TJSONObject.Create();
   LServicesPizzas := TServicesPizzas.Create(nil);
