@@ -9,17 +9,10 @@
         <Filename Value="ApiPizzaria.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="20"/>
-        <UsageCount Value="97"/>
+        <TopLine Value="24"/>
+        <CursorPos X="21" Y="6"/>
+        <UsageCount Value="98"/>
         <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controller.root.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="22" Y="12"/>
-        <UsageCount Value="97"/>
       </Unit>
       <Unit>
         <Filename Value="..\providers\provider.connection.pas"/>
@@ -27,14 +20,44 @@
         <ComponentName Value="ProviderConnection"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos Y="18"/>
+        <EditorIndex Value="2"/>
+        <CursorPos Y="2"/>
+        <UsageCount Value="98"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controller.root.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="29" Y="8"/>
         <UsageCount Value="97"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesPizzas"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="31"/>
+        <CursorPos X="28" Y="40"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="33"/>
+        <CursorPos X="25" Y="23"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\services\services.logins.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesLogins"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -45,7 +68,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.logins.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="12"/>
         <CursorPos X="21" Y="12"/>
@@ -54,7 +76,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\services\services.permissoes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesPermissoes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -64,7 +85,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.permissoes.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="12"/>
         <CursorPos X="21" Y="12"/>
@@ -73,7 +93,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\services\services.racoes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesRacoes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -84,7 +103,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.racoes.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="6"/>
         <CursorPos X="31" Y="16"/>
@@ -93,7 +111,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\services\services.causasmortes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesCausasMortes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -103,7 +120,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.causasmortes.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3"/>
         <CursorPos X="21" Y="12"/>
@@ -112,7 +128,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\services\services.causasperdasovos.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesCausasPerdasOvos"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -123,7 +138,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.causasperdasovos.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="3"/>
         <CursorPos X="21" Y="12"/>
@@ -132,7 +146,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\services\services.lotes.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesLotes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -140,11 +153,9 @@
         <TopLine Value="31"/>
         <CursorPos X="95" Y="78"/>
         <UsageCount Value="93"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.lotes.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="65"/>
         <CursorPos Y="76"/>
@@ -152,7 +163,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.diarios.pas"/>
-        <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="23"/>
         <CursorPos X="50" Y="37"/>
@@ -160,7 +170,6 @@
       </Unit>
       <Unit>
         <Filename Value="..\services\services.diarios.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesDiarios"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
@@ -168,7 +177,6 @@
         <TopLine Value="134"/>
         <CursorPos X="27" Y="147"/>
         <UsageCount Value="49"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\services\servoces.racoes.pas"/>
@@ -320,8 +328,80 @@
         <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\Lazarus\lazarus\ide\lazarus.pp"/>
+        <UnitName Value="Lazarus"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="151"/>
+        <CursorPos Y="167"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="15">
+      <Position>
+        <Filename Value="ApiPizzaria.pas"/>
+        <Caret Column="20"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="18" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="17" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="16" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="15" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="16" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.pizzas.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <Caret Line="41" Column="15" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="16" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="37" Column="3" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <Caret Line="12" Column="30"/>
+      </Position>
+      <Position>
+        <Filename Value="ApiPizzaria.pas"/>
+        <Caret Line="17" Column="10" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <Caret Line="11" Column="11" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="..\providers\provider.connection.pas"/>
+        <Caret Line="7" Column="47"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <Caret Line="25" Column="27" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <Caret Line="40" Column="28" TopLine="31"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

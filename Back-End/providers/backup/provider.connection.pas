@@ -1,6 +1,5 @@
 unit provider.connection;
-
-{$mode Delphi}
+{$MODE DELPHI}{$H+}
 
 interface
 
@@ -12,8 +11,10 @@ type
   { TProviderConnection }
 
   TProviderConnection = class(TDataModule)
-    SQLServerUniProvider1: TSQLServerUniProvider;
+    SQLServerUniProvider: TSQLServerUniProvider;
     dbsConnection: TUniConnection;
+    procedure dbsConnectionBeforeConnect(Sender: TObject);
+    procedure dbsConnectionBeforeDisconnect(Sender: TObject);
   private
 
   public
@@ -29,6 +30,16 @@ implementation
 
 { TProviderConnection }
 
+
+procedure TProviderConnection.dbsConnectionBeforeConnect(Sender: TObject);
+begin
+ CoInitialize(nil);
+end;
+
+procedure TProviderConnection.dbsConnectionBeforeDisconnect(Sender: TObject);
+begin
+  CoUninitialize;
+end;
 
 end.
 

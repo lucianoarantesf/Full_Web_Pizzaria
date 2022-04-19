@@ -44,10 +44,6 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="..\controllers\controller.root.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
         <Filename Value="..\providers\provider.connection.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ProviderConnection"/>
@@ -55,79 +51,9 @@
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
       <Unit>
-        <Filename Value="..\services\services.logins.pas"/>
+        <Filename Value="..\services\services.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesLogins"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.logins.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\services\services.permissoes.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesPermissoes"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.permissoes.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\services\services.racoes.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesRacoes"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.racoes.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\services\services.causasmortes.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesCausasMortes"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.causasmortes.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\services\services.causasperdasovos.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesCausasPerdasOvos"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.causasperdasovos.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\services\services.lotes.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesLotes"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="DataModule"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.lotes.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\controllers\controllers.diarios.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="..\services\services.diarios.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="ServicesDiarios"/>
+        <ComponentName Value="ServicesPizzas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
@@ -141,7 +67,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="controllers;services;provider;..\controllers;..\providers;..\services;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src"/>
+      <OtherUnitFiles Value="controllers;services;provider;..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

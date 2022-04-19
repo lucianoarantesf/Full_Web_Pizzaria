@@ -4,12 +4,22 @@ object ProviderConnection: TProviderConnection
   HorizontalOffset = 558
   VerticalOffset = 129
   Width = 250
-  object SQLServerUniProvider1: TSQLServerUniProvider
+  object SQLServerUniProvider: TSQLServerUniProvider
     Left = 152
     Top = 80
   end
   object dbsConnection: TUniConnection
+    Connected = True
+    LoginPrompt = False
+    BeforeConnect = dbsConnectionBeforeConnect
+    BeforeDisconnect = dbsConnectionBeforeDisconnect
+    ProviderName = 'SQL Server'
+    Port = 1433
+    Database = 'dbsPizzaria'
+    Username = 'Admin'
+    Server = '127.0.01'
     Left = 64
     Top = 40
+    EncryptedPassword = 'BFFF9BFFB2FF96FF91FF'
   end
 end
