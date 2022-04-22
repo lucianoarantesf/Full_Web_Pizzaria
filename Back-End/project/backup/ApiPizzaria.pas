@@ -5,8 +5,8 @@ uses
   Classes,
   SysUtils,FileInfo,
   Horse,
+  Horse.CORS,
   Horse.BasicAuthentication,
-  Horse.OctetStream,
   Horse.HandleException,
   Horse.Jhonson,
   controller.root,
@@ -41,11 +41,20 @@ begin
 end;
 
 
+{$R *.res}
+
 begin
   //Instancia Middlewares
+     HorseCORS
+     .AllowedOrigin('*')
+     .AllowedCredentials('true')
+     .AllowedHeaders('*')
+     .AllowedMethods('*')
+     .ExposedHeaders('*');
+
    THorse
+       .Use(CORS)
        .Use(HorseBasicAuthentication(DoLogin))
-       .Use(OctetStream)
        .Use(HandleException)
        .Use(Jhonson);
 

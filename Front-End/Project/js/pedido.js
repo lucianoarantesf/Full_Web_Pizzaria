@@ -1,65 +1,8 @@
-const pizzas = [
-    { title: "Pizzas", id: "P-1", pizza: "Calabresa", valor: 25.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-1", pizza: "Calabresa", valor: 35.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-1", pizza: "Calabresa", valor: 49.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-2", pizza: "Frango Catupiry", valor: 23.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-2", pizza: "Frango Catupiry", valor: 34.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-2", pizza: "Frango Catupiry", valor: 44.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-3", pizza: "Marguerita", valor: 28.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-3", pizza: "Marguerita", valor: 38.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-3", pizza: "Marguerita", valor: 52.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-4", pizza: "4 Queijo", valor: 19.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-4", pizza: "4 Queijo", valor: 24.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-4", pizza: "4 Queijo", valor: 29.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-5", pizza: "Carne Seca", valor: 26.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-5", pizza: "Carne Seca", valor: 38.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-5", pizza: "Carne Seca", valor: 48.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-6", pizza: "Portuguesa", valor: 24.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-6", pizza: "Portuguesa", valor: 33.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-6", pizza: "Portuguesa", valor: 48.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-7", pizza: "Leite em Pó", valor: 33.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-7", pizza: "Leite em Pó", valor: 44.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-7", pizza: "Leite em Pó", valor: 54.99, detalhe: "Grande" },
-    { title: "Pizzas", id: "P-8", pizza: "Nutella e Sorvete", valor: 38.99, detalhe: "Pequena" },
-    { title: "Pizzas", id: "M-8", pizza: "Nutella e Sorvete", valor: 48.99, detalhe: "Media" },
-    { title: "Pizzas", id: "G-8", pizza: "Nutella e Sorvete", valor: 59.99, detalhe: "Grande" }
-]
-
 var Comando;
 var GComando = [];
 var ButtonEnviar = '<div class="col-md-auto" style="text-align: center; margin-top: 10px;"> <button type="button" class="btn btn-success">Finalizar Pedido</button> </div>'
 
-//PEDIDO
-// COMANDO QUE VERIFICA O PREÇO DOS PEDIDOS
-//POR ENQUANTO ESTA NO ARRAY ATÉ EU CONECTAR COM O BANCO DE DADOS
-function preco(tam, tag) {
-    // TABELA DE PREÇOS // 
-    const verificaPizza = pizzas => pizzas.id == tam + '-' + tag;
-    const preco = pizzas.filter(verificaPizza)
-    return window.document.getElementById('preco' + tag).innerText = 'Valor R$' + preco[0].valor;
-}
-//SAINDO COM O CURSOR SOBRE O TAMANHO //
-function saidapreco(tag) {
-    return window.document.getElementById('preco' + tag).innerText = 'Selecione o Tamanho:';
-}
-
-function Carrinho() {
-    return window.location.href = "../page/pedido.html#itemCarrinho-Pedido";
-
-}
-
-function formaPedido(id, campo) {
-
-    var input = window.document.getElementsByName(campo);
-    var Ativo = input[0].checked
-
-
-    const verificaPizza = pizzas => pizzas.id == id;
-    const preco = pizzas.filter(verificaPizza)
-    var Pizza = preco[0].pizza;
-    var Detalhe = preco[0].detalhe;
-    var Valor = preco[0].valor;
-
+function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
     // Cria a Lista
     const abreLi = `<ul id="itemCarrinho-Pedido${id}" class="list-group list-group"><li id="${id}" class="list-group-item d-flex justify-content-between align-items-start">`
     const DivItem = `<div class="ms-2 me-auto">` +
@@ -113,6 +56,75 @@ function formaPedido(id, campo) {
 
 
 
+
+
+
+
+
+
+
+
+//PEDIDO
+// COMANDO QUE VERIFICA O PREÇO DOS PEDIDOS
+//POR ENQUANTO ESTA NO ARRAY ATÉ EU CONECTAR COM O BANCO DE DADOS
+function preco(tam, tag) {
+    var id = tam + '-' + tag;
+
+    const options = {
+        method: 'GET',
+        mode: 'cors',
+        headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
+    };
+
+    fetch(`http://127.0.0.1:9000/pizzas?id=` + id, options)
+        .then(async(response) => {
+            response.json()
+                .then(data => {
+                    const verificaPizza = data => data.id == id;
+                    const preco = data.filter(verificaPizza);
+                    var Valor = preco[0].valor;
+                    window.document.getElementById('tagId' + tag).innerText = 'Valor R$' + Valor;
+                })
+        })
+        .catch(e => alert('Erro: ' + e, message));
+
+
+}
+//SAINDO COM O CURSOR SOBRE O TAMANHO //
+function saidapreco(tag) {
+    return window.document.getElementById('tagId' + tag).innerText = 'Selecione o Tamanho:';
+}
+
+function Carrinho() {
+    return window.location.href = "../page/pedido.html#itemCarrinho-Pedido";
+
+}
+
+function formaPedido(id, campo) {
+    var input = window.document.getElementsByName(campo);
+    var Ativo = input[0].checked
+
+
+    const options = {
+        method: 'GET',
+        mode: 'cors',
+        headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
+    };
+
+    fetch(`http://127.0.0.1:9000/pizzas?id=` + id, options)
+        .then(async(response) => {
+            response.json()
+                .then(data => {
+                    const verificaPizza = data => data.id == id;
+                    const preco = data.filter(verificaPizza)
+                    var Pizza = preco[0].pizza;
+                    var Detalhe = preco[0].detalhe;
+                    var Valor = preco[0].valor;
+                    MontarLista(Ativo, id, Valor, Pizza, Detalhe)
+                })
+        })
+        .catch(e => alert('Erro: ' + e, message));
+}
 
 // COMANDO BOTÃO DE SOMA E SUB DO PEDIDO
 function quantidade(id, suma, subi) {

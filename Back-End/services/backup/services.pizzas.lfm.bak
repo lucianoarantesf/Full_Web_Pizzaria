@@ -27,7 +27,7 @@ object ServicesPizzas: TServicesPizzas
       ''
       ''
       ''
-      'ORDER BY ID'
+      'ORDER BY TAG_ID,ID'
       ''
       ''
       ''

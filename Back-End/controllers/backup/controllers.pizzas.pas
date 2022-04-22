@@ -19,11 +19,9 @@ uses services.pizzas;
 procedure getPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
 var
    LServicesPizzas     : TServicesPizzas;
-   LRespJSON           : TJSONObject;
-   vId, LDados         : String;
+   vId                 : String;
 
 begin
-  LRespJSON           := TJSONObject.Create();
   LServicesPizzas := TServicesPizzas.Create(nil);
   try
     try
@@ -35,48 +33,13 @@ begin
           if Req.Query.ContainsKey('id') then
           begin
            vId := Req.Query.Items['id'];
-           qryPizzas.SQL.Strings[5] := 'ID = :ID';
+           qryPizzas.SQL.Strings[5] := 'AND ID = :ID';
            qryPizzas.ParamByName('ID').AsString := vId;
           end;
 
-         qryPizzas.Open;
+          qryPizzas.Open;
 
-         if qryPizzas.IsEmpty then
-         begin
-            LRespJSON.Clear;
-            LRespJSON.Add('success',False);
-            LRespJSON.Add('status',200);
-            LRespJSON.Add('message', UTF8Decode( 'Pizza não encontrada.' ) );
-         end
-         else
-         begin
-            LRespJSON.Clear;
-            LRespJSON.Add('success',True);
-            LRespJSON.Add('status',200);
-            LRespJSON.Add('message','Total de Registros: ' + qryPizzas.RecordCount.ToString);
-            LRespJSON.Add('records', qryPizzas.RecordCount);
-            LRespJSON.Add('data', qryPizzas.ToJSONArray());
-            qryPizzas.First;
-            LDados :=  '[ ' ;
-            while not qryPizzas.EOF do
-            begin
-             LDados := LDados + ' [ ' + '"' + qryPizzas.FieldByName('ID').AsString         + '",'
-                                      + '"' + qryPizzas.FieldByName('TITLE').AsString      + '",'
-                                      + '"' + qryPizzas.FieldByName('PIZZA').AsString      + '",'
-                                      + '"' + qryPizzas.FieldByName('VALOR').AsString      + '",'
-                                      + '"' + qryPizzas.FieldByName('DETALHE').AsString    + '"'
-                              + ' ],';
-             qryPizzas.next;
-            end;
-            LDados := Copy(LDados, 1 ,Length(LDados)-1);
-            LDados := LDados + ' ]' ;
-
-            LRespJSON.Add('tabledata', LDados);
-         end;
-
-         qryPizzas.Close;
-
-         Res.ContentType('application/json').Send(  LRespJSON.AsJSON ).status(200);
+         Res.ContentType('application/json').Send(qryPizzas.ToJSONArrayString).status(200);
        end;
     except
         on E:exception do
@@ -87,7 +50,6 @@ begin
 
   finally
     FreeAndNil(LServicesPizzas);
-    FreeAndNil(LRespJSON);
   end;
 end;
 
