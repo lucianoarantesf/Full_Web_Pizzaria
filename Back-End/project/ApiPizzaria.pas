@@ -10,7 +10,8 @@ uses
   Horse.HandleException,
   Horse.Jhonson,
   controller.root,
-  controllers.pizzas;
+  controllers.pizzas,
+  controllers.post.pizzas;
 
 const
  USER = 'Admin';
@@ -60,6 +61,7 @@ begin
 
    TRoot.registry;
    TPizzas.registry;
+   TPostPizzas.registry;
 
    THorse.Listen(9000, OnListen);
 end.

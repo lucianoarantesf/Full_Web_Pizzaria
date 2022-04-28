@@ -20,7 +20,6 @@ procedure getPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
 var
    LServicesPizzas     : TServicesPizzas;
    vId                 : String;
-
 begin
   LServicesPizzas := TServicesPizzas.Create(nil);
   try

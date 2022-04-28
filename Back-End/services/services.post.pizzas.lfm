@@ -1,0 +1,14 @@
+object ServicesPostPizzas: TServicesPostPizzas
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 318
+  VerticalOffset = 119
+  Width = 150
+  object qryInsere: TUniQuery
+    FilterOptions = []
+    Left = 56
+    Top = 40
+  end
+end

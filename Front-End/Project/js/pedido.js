@@ -1,6 +1,6 @@
 var Comando;
 var GComando = [];
-var ButtonEnviar = '<div class="col-md-auto" style="text-align: center; margin-top: 10px;"> <button type="button" class="btn btn-success">Finalizar Pedido</button> </div>'
+var ButtonEnviar = '<div class="col-md-auto" style="text-align: center; margin-top: 10px;"> <button type="button" class="btn btn-success" onclick="EnviarPedido()" >Finalizar Pedido</button> </div>'
 
 function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
     // Cria a Lista
@@ -11,10 +11,6 @@ function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
         `</div>`
     const DivQtd = `<div style="display: grid;">` +
         `<span id="qtdProd${id}" style="width: 25px;margin-left: auto;" class="badge bg-primary rounded-pill">1</span>` +
-        `<div style="display: inline;margin-top: 8px;">` +
-        `<span style="width: 25px;margin-left: auto; background-color: green;" type="button" class="badge rounded-pill" onclick="quantidade('${id}',1,0)">+</span>` +
-        `<span style="width: 25px;margin-left: auto; background-color: red;" type="button" class="badge rounded-pill" onclick="quantidade('${id}',0,1)">-</span>` +
-        `</div>` +
         `</div>`
     const fechaLi = `</li></ul>`
     var lista = window.document.getElementById('itemCarrinho-Pedido' + id)
@@ -58,6 +54,15 @@ function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
 
 
 
+const pedido = [];
+
+function ArmazenaPedido(id, valor, quantidade, pizza, detalhe) {
+    pedido.push(`{id : ${id}, valor : ${valor}, quantidade : ${quantidade}, pizza : ${pizza}, detalhe : ${detalhe}}`);
+}
+
+function EnviarPedido() {
+    alert(pedido)
+}
 
 
 
@@ -66,7 +71,6 @@ function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
 
 //PEDIDO
 // COMANDO QUE VERIFICA O PREÇO DOS PEDIDOS
-//POR ENQUANTO ESTA NO ARRAY ATÉ EU CONECTAR COM O BANCO DE DADOS
 function preco(tam, tag) {
     var id = tam + '-' + tag;
 
@@ -95,11 +99,7 @@ function saidapreco(tag) {
     return window.document.getElementById('tagId' + tag).innerText = 'Selecione o Tamanho:';
 }
 
-function Carrinho() {
-    return window.location.href = "../page/pedido.html#itemCarrinho-Pedido";
-
-}
-
+// forma o pedido 
 function formaPedido(id, campo) {
     var input = window.document.getElementsByName(campo);
     var Ativo = input[0].checked
@@ -120,35 +120,17 @@ function formaPedido(id, campo) {
                     var Pizza = preco[0].pizza;
                     var Detalhe = preco[0].detalhe;
                     var Valor = preco[0].valor;
-                    MontarLista(Ativo, id, Valor, Pizza, Detalhe)
+                    ArmazenaPedido(id, Valor, 1, Pizza, Detalhe);
+                    MontarLista(Ativo, id, Valor, Pizza, Detalhe);
                 })
         })
         .catch(e => alert('Erro: ' + e, message));
 }
 
-// COMANDO BOTÃO DE SOMA E SUB DO PEDIDO
-function quantidade(id, suma, subi) {
-    input = window.document.getElementById('qtdProd' + id);
-    qtd = parseInt(input.innerText);
-    resultado = null;
-    if (suma == 1) {
-        var qtd = qtd + 1;
-        resultado = window.document.getElementById('qtdProd' + id).innerText = qtd;
-    }
-    if (subi == 1) {
-        var qtd = qtd - 1;
-        resultado = window.document.getElementById('qtdProd' + id).innerText = qtd;
-    }
-    if (qtd <= 0) {
-        qtd = 0
-        resultado = window.document.getElementById('qtdProd' + id).innerText = qtd;
-    } else if (qtd == 10 || qtd > 10) {
-        var qtd = 10;
-        resultado = window.document.getElementById('qtdProd' + id).innerText = qtd;
-    } else {
-        resultado = null;
 
 
-    }
-    return resultado;
+// faz voltar ao carrinho de compras
+function Carrinho() {
+    return window.location.href = "../page/pedido.html#itemCarrinho-Pedido";
+
 }

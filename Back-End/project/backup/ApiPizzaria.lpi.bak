@@ -18,6 +18,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
+      <BuildNr Value="2"/>
       <StringTable Comments="Api Pizzaria" CompanyName="Api Pizzaria" FileDescription="Api Pizzaria" ProductName="Api Pizzaria"/>
     </VersionInfo>
     <BuildModes>
@@ -31,6 +32,9 @@
       <FormatVersion Value="2"/>
     </RunParams>
     <RequiredPackages>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
       <Item>
         <PackageName Value="dac10"/>
       </Item>
@@ -69,6 +73,16 @@
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesPostPizzas"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>

@@ -18,7 +18,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="1"/>
+      <BuildNr Value="2"/>
       <StringTable Comments="Api Pizzaria" CompanyName="Api Pizzaria" FileDescription="Api Pizzaria" ProductName="Api Pizzaria"/>
     </VersionInfo>
     <BuildModes>
@@ -32,6 +32,9 @@
       <FormatVersion Value="2"/>
     </RunParams>
     <RequiredPackages>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
       <Item>
         <PackageName Value="dac10"/>
       </Item>
@@ -72,6 +75,16 @@
         <Filename Value="..\controllers\controllers.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\services\services.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesPostPizzas"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -82,7 +95,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="controllers;services;provider;..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers"/>
+      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers;C:\HORSE\modules\JSON4D\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

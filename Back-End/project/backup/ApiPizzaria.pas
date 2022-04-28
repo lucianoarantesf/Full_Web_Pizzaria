@@ -10,7 +10,7 @@ uses
   Horse.HandleException,
   Horse.Jhonson,
   controller.root,
-  controllers.pizzas;
+  controllers.pizzas, services.post.pizzas, controllers.post.pizzas;
 
 const
  USER = 'Admin';
@@ -47,7 +47,7 @@ begin
   //Instancia Middlewares
      HorseCORS
      .AllowedOrigin('*')
-     .AllowedCredentials('true')
+     .AllowedCredentials(true)
      .AllowedHeaders('*')
      .AllowedMethods('*')
      .ExposedHeaders('*');
