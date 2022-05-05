@@ -33,8 +33,9 @@ implementation
 procedure TServicesPostPizzas.DataModuleCreate(Sender: TObject);
 begin
     vProviders := TProviderConnection.Create(Nil);
-    vProviders.dbsConnection.Connected := True;
-    qryPizzas.Connection := vProviders.dbsConnection;
+    vProviders.dbConnection.Connected := True;
+    qryInsere.DataBase                := vProviders.dbConnection;
+    qryInsere.Transaction             := vProviders.dbTransaction;
 end;
 
 procedure TServicesPostPizzas.DataModuleDestroy(Sender: TObject);

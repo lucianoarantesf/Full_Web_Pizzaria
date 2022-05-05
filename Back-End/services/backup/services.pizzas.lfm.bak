@@ -3,13 +3,15 @@ object ServicesPizzas: TServicesPizzas
   OnDestroy = DataModuleDestroy
   OldCreateOrder = False
   Height = 182
-  HorizontalOffset = 761
-  VerticalOffset = 176
+  HorizontalOffset = 726
+  VerticalOffset = 214
   Width = 357
-  object qryPizzas: TUniQuery
-    Connection = ProviderConnection.dbsConnection
+  object qryPizzas: TSQLQuery
+    FieldDefs = <>
+    Database = ProviderConnection.dbConnection
+    Transaction = ProviderConnection.dbTransaction
     SQL.Strings = (
-      'SELECT ID,TAG_ID,TITLE,PIZZA,VALOR,DETALHE FROM PIZZAS'
+      'SELECT ID,TAGID,TITLE,PIZZA,VALOR,DETALHE FROM PIZZA'
       'WHERE 1 = 1'
       ''
       ''
@@ -47,9 +49,12 @@ object ServicesPizzas: TServicesPizzas
       ''
       ''
       ''
+      ''
+      ''
     )
-    FilterOptions = []
-    Left = 160
-    Top = 48
+    Params = <>
+    Macros = <>
+    Left = 168
+    Top = 64
   end
 end

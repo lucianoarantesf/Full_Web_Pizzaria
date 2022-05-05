@@ -4,15 +4,15 @@ var ButtonEnviar = '<div class="col-md-auto" style="text-align: center; margin-t
 
 function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
     // Cria a Lista
-    const abreLi = `<ul id="itemCarrinho-Pedido${id}" class="list-group list-group"><li id="${id}" class="list-group-item d-flex justify-content-between align-items-start">`
+    const abreLi = `<ul id="itemCarrinho-Pedido${id}" class="list-group list-group"><li id="${id}" class="list-group-item d-flex justify-content-between align-items-start">`;
     const DivItem = `<div class="ms-2 me-auto">` +
         `<div id="itemCarrinho-PedidoTitulo${id}" class="fw-bold">${Pizza} - ${Detalhe}</div>` +
         `<p id="itemCarrinho-PedidoDetalhe${id}">Valor : R$${Valor}</p>` +
-        `</div>`
+        `</div>`;
     const DivQtd = `<div style="display: grid;">` +
         `<span id="qtdProd${id}" style="width: 25px;margin-left: auto;" class="badge bg-primary rounded-pill">1</span>` +
-        `</div>`
-    const fechaLi = `</li></ul>`
+        `</div>`;
+    const fechaLi = `</li></ul>`;
     var lista = window.document.getElementById('itemCarrinho-Pedido' + id)
     Comando = abreLi + DivItem + DivQtd + fechaLi
 
@@ -57,11 +57,36 @@ function MontarLista(Ativo, id, Valor, Pizza, Detalhe) {
 const pedido = [];
 
 function ArmazenaPedido(id, valor, quantidade, pizza, detalhe) {
-    pedido.push(`{id : ${id}, valor : ${valor}, quantidade : ${quantidade}, pizza : ${pizza}, detalhe : ${detalhe}}`);
+    pedido.push({ "id": id, "valor": valor, "quantidade": quantidade, "pizza": pizza, "detalhe": detalhe });
 }
 
 function EnviarPedido() {
-    alert(pedido)
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", "Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6");
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify(pedido);
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+    };
+
+    fetch(`http://192.168.10.15:9000/pizzas/post`, requestOptions)
+        .then(async(response) => {
+            response.json()
+                .then(data => {
+                    const verificaPizza = data => data.id == id;
+                    const pizza = data.filter(verificaPizza);
+                    var Pizza = preco[0].pizza;
+                    var Detalhe = preco[0].detalhe;
+                    var Valor = preco[0].valor;
+                    alert('Pizza: ' + Pizza + Detalhe + ' Valor: ' + Valor)
+                })
+        })
+        .catch(alert('Erro: ' + response));
 }
 
 
@@ -80,7 +105,7 @@ function preco(tam, tag) {
         headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
     };
 
-    fetch(`http://127.0.0.1:9000/pizzas?id=` + id, options)
+    fetch(`http://192.168.10.15:9000/pizzas?id=` + id, options)
         .then(async(response) => {
             response.json()
                 .then(data => {
@@ -111,7 +136,7 @@ function formaPedido(id, campo) {
         headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
     };
 
-    fetch(`http://127.0.0.1:9000/pizzas?id=` + id, options)
+    fetch(`http://192.168.10.15:9000/pizzas?id=` + id, options)
         .then(async(response) => {
             response.json()
                 .then(data => {

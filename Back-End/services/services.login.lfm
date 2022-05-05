@@ -1,0 +1,32 @@
+object ServicesLogin: TServicesLogin
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 318
+  VerticalOffset = 119
+  Width = 150
+  object qryLogin: TSQLQuery
+    FieldDefs = <>
+    SQL.Strings = (
+      'SELECT * FROM USUARIO'
+      'WHERE UPPER(USUARIO) = UPPER(:USER)'
+      'AND   UPPER(SENHA)   = UPPER(:PASS)'
+      ''
+    )
+    Params = <    
+      item
+        DataType = ftUnknown
+        Name = 'USER'
+        ParamType = ptInput
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PASS'
+        ParamType = ptInput
+      end>
+    Macros = <>
+    Left = 64
+    Top = 56
+  end
+end

@@ -4,22 +4,22 @@ object ProviderConnection: TProviderConnection
   HorizontalOffset = 558
   VerticalOffset = 129
   Width = 250
-  object SQLServerUniProvider: TSQLServerUniProvider
-    Left = 152
-    Top = 80
-  end
-  object dbsConnection: TUniConnection
+  object dbConnection: TSQLite3Connection
     Connected = True
     LoginPrompt = False
-    BeforeConnect = dbsConnectionBeforeConnect
-    BeforeDisconnect = dbsConnectionBeforeDisconnect
-    ProviderName = 'SQL Server'
-    Port = 1433
-    Database = 'dbsPizzaria'
-    Username = 'Admin'
-    Server = '127.0.01'
-    Left = 64
-    Top = 40
-    EncryptedPassword = 'BFFF9BFFB2FF96FF91FF'
+    BeforeConnect = dbConnectionBeforeConnect
+    BeforeDisconnect = dbConnectionBeforeDisconnect
+    DatabaseName = 'C:\TrabalhosFaculdade\Trabalho Final Luciano\Fontes\Back-End\database\dbsPizza.db3'
+    KeepConnection = False
+    Transaction = dbTransaction
+    AlwaysUseBigint = False
+    Left = 152
+    Top = 24
+  end
+  object dbTransaction: TSQLTransaction
+    Active = True
+    Database = dbConnection
+    Left = 40
+    Top = 24
   end
 end

@@ -6,9 +6,11 @@ object ServicesPostPizzas: TServicesPostPizzas
   HorizontalOffset = 318
   VerticalOffset = 119
   Width = 150
-  object qryInsere: TUniQuery
-    FilterOptions = []
-    Left = 56
-    Top = 40
+  object qryInsere: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 64
+    Top = 48
   end
 end

@@ -5,14 +5,14 @@ unit services.post.pizzas;
 interface
 
 uses
-  Classes, SysUtils,  provider.connection, Uni  ;
+  Classes, SysUtils,  provider.connection, SQLDB, Uni  ;
 
 type
 
   { TServicesPostPizzas }
 
   TServicesPostPizzas = class(TDataModule)
-    qryInsere: TUniQuery;
+    qryInsere: TSQLQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -33,8 +33,9 @@ implementation
 procedure TServicesPostPizzas.DataModuleCreate(Sender: TObject);
 begin
     vProviders := TProviderConnection.Create(Nil);
-    vProviders.dbsConnection.Connected := True;
-    qryInsere.Connection := vProviders.dbsConnection;
+    vProviders.dbConnection.Connected := True;
+    qryInsere.DataBase                := vProviders.dbConnection;
+    qryInsere.Transaction             := vProviders.dbTransaction;
 end;
 
 procedure TServicesPostPizzas.DataModuleDestroy(Sender: TObject);

@@ -1,0 +1,252 @@
+{
+    "type": "database",
+    "name": "dbsPizza",
+    "objects": [
+        {
+            "type": "table",
+            "database": null,
+            "name": "CLIENTE",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE CLIENTE (ID_PESSOA INTEGER, ID_CLIENTE INTEGER, FORMA_PAGAMENTO TEXT (50), PRIMARY KEY (ID_PESSOA, ID_CLIENTE), FOREIGN KEY (ID_PESSOA) REFERENCES PESSOA (ID_PESSOA))",
+            "columns": [
+                {
+                    "name": "ID_PESSOA",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "ID_CLIENTE",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "FORMA_PAGAMENTO",
+                    "type": "TEXT"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ID_PESSOA, ID_CLIENTE)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ID_PESSOA) REFERENCES PESSOA (ID_PESSOA)"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "FUNCIONARIO",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE FUNCIONARIO (ID_PESSOA INTEGER, MATRICULA INTEGER, CARGO TEXT (50), PRIMARY KEY (ID_PESSOA, MATRICULA), FOREIGN KEY (ID_PESSOA) REFERENCES PESSOA (ID_PESSOA))",
+            "columns": [
+                {
+                    "name": "ID_PESSOA",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "MATRICULA",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "CARGO",
+                    "type": "TEXT"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ID_PESSOA, MATRICULA)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ID_PESSOA) REFERENCES PESSOA (ID_PESSOA)"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PEDIDO",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE PEDIDO (ID_CLIENTE INTEGER, ID_PIZZA INTEGER, NRO_PEDIDO INTEGER, QUANTIDADE INTEGER, FORMA_PAGAMENTO TEXT (50), STATUS TEXT (20), END_ENTREGA TEXT (200), DT_PEDIDO DATE, HR_PEDIDO TIME, PRIMARY KEY (ID_CLIENTE, ID_PIZZA, NRO_PEDIDO), FOREIGN KEY (ID_PIZZA) REFERENCES PIZZA (ID), FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE (ID_CLIENTE))",
+            "columns": [
+                {
+                    "name": "ID_CLIENTE",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "ID_PIZZA",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "NRO_PEDIDO",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "QUANTIDADE",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "FORMA_PAGAMENTO",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "STATUS",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "END_ENTREGA",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "DT_PEDIDO",
+                    "type": "DATE"
+                },
+                {
+                    "name": "HR_PEDIDO",
+                    "type": "TIME"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ID_CLIENTE, ID_PIZZA, NRO_PEDIDO)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ID_PIZZA) REFERENCES PIZZA (ID)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ID_CLIENTE) REFERENCES CLIENTE (ID_CLIENTE)"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PESSOA",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE PESSOA (ID_PESSOA INTEGER, NOME TEXT (50), ENDERECO TEXT (200), CPF TEXT (15), PRIMARY KEY (ID_PESSOA))",
+            "columns": [
+                {
+                    "name": "ID_PESSOA",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "NOME",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "ENDERECO",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "CPF",
+                    "type": "TEXT"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ID_PESSOA)"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "PIZZA",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE PIZZA (ID TEXT (3), TAGID INTEGER, TITLE TEXT (20), PIZZA TEXT (50), VALOR REAL, DETALHE TEXT (20), PRIMARY KEY (ID))",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "TAGID",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "TITLE",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "PIZZA",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "VALOR",
+                    "type": "REAL"
+                },
+                {
+                    "name": "DETALHE",
+                    "type": "TEXT"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ID)"
+                }
+            ],
+            "rows": [
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "USUARIO",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE USUARIO (ID_PESSOA INTEGER, USUARIO TEXT (200), SENHA TEXT (8), TIPO_CADASTRO TEXT (50), PERMISSOES_PEDIDOS BOOLEAN, PERMISSOES_CADASTRAR BOOLEAN, PRIMARY KEY (ID_PESSOA, USUARIO), FOREIGN KEY (ID_PESSOA) REFERENCES PESSOA (ID_PESSOA))",
+            "columns": [
+                {
+                    "name": "ID_PESSOA",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "USUARIO",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "SENHA",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "TIPO_CADASTRO",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "PERMISSOES_PEDIDOS",
+                    "type": "BOOLEAN"
+                },
+                {
+                    "name": "PERMISSOES_CADASTRAR",
+                    "type": "BOOLEAN"
+                }
+            ],
+            "constraints": [
+                {
+                    "type": "PRIMARY KEY",
+                    "definition": "PRIMARY KEY (ID_PESSOA, USUARIO)"
+                },
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "FOREIGN KEY (ID_PESSOA) REFERENCES PESSOA (ID_PESSOA)"
+                }
+            ],
+            "rows": [
+            ]
+        }
+    ]
+}

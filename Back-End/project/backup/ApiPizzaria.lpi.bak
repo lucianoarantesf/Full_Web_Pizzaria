@@ -79,10 +79,22 @@
         <Filename Value="..\services\services.post.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesPostPizzas"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.logins.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -95,7 +107,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="controllers;services;provider;..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers"/>
+      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers;C:\HORSE\modules\JSON4D\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>
@@ -155,6 +167,12 @@
       </Item>
       <Item>
         <Name Value="EMSError"/>
+      </Item>
+      <Item>
+        <Name Value="EJSONParser"/>
+      </Item>
+      <Item>
+        <Name Value="ESQLDatabaseError"/>
       </Item>
     </Exceptions>
   </Debugging>

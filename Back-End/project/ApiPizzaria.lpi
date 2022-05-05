@@ -79,10 +79,22 @@
         <Filename Value="..\services\services.post.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesPostPizzas"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\services\services.login.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesLogin"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.logins.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -155,6 +167,12 @@
       </Item>
       <Item>
         <Name Value="EMSError"/>
+      </Item>
+      <Item>
+        <Name Value="EJSONParser"/>
+      </Item>
+      <Item>
+        <Name Value="ESQLDatabaseError"/>
       </Item>
     </Exceptions>
   </Debugging>

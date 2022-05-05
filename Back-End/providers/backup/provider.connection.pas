@@ -4,17 +4,17 @@ unit provider.connection;
 interface
 
 uses
-  Classes, SysUtils, Uni, SQLServerUniProvider,ActiveX;
+  Classes, SysUtils, ActiveX, SQLite3Conn, SQLDB;
 
 type
 
   { TProviderConnection }
 
   TProviderConnection = class(TDataModule)
-    SQLServerUniProvider: TSQLServerUniProvider;
-    dbsConnection: TUniConnection;
-    procedure dbsConnectionBeforeConnect(Sender: TObject);
-    procedure dbsConnectionBeforeDisconnect(Sender: TObject);
+    dbConnection: TSQLite3Connection;
+    dbTransaction: TSQLTransaction;
+    procedure dbConnectionBeforeConnect(Sender: TObject);
+    procedure dbConnectionBeforeDisconnect(Sender: TObject);
   private
 
   public
@@ -31,15 +31,19 @@ implementation
 { TProviderConnection }
 
 
-procedure TProviderConnection.dbsConnectionBeforeConnect(Sender: TObject);
+
+
+procedure TProviderConnection.dbConnectionBeforeConnect(Sender: TObject);
 begin
- CoInitialize(nil);
+  CoInitialize(nil);
 end;
 
-procedure TProviderConnection.dbsConnectionBeforeDisconnect(Sender: TObject);
+procedure TProviderConnection.dbConnectionBeforeDisconnect(Sender: TObject);
 begin
-  CoUninitialize;
+    CoUninitialize;
 end;
+
+
 
 end.
 

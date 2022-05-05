@@ -18,27 +18,28 @@ uses services.post.pizzas;
 procedure setPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
 var
    LServicesPostPizzas     : TServicesPostPizzas;
-   L
+   LJsonArray              : TJsonArray;
 begin
   LServicesPostPizzas := TServicesPostPizzas.Create(nil);
+  LJsonArray          := TJsonArray.Create(nil);
   try
     try
        with LServicesPostPizzas do
        begin
+           LJsonArray.Parse(Req.Body);
 
-
-
-         Res.ContentType('application/json').Send(Format('{"STATUS":"%s"}',['OK'])).status(200);
+         Res.ContentType('application/json').Send(LJsonArray.Stringify).status(200);
        end;
     except
         on E:exception do
         begin
-           Res.ContentType('application/json').Send(Format('{"ERROR":"%s"}',[e.message])).status(500);
+           Res.ContentType('application/json').Send(Format('{"retorno":"%s"}',[e.message])).status(500);
         end;
     end;
 
   finally
     FreeAndNil(LServicesPostPizzas);
+    FreeAndNil(LJsonArray);
   end;
 end;
 

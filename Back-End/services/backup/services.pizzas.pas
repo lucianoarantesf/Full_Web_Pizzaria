@@ -8,14 +8,14 @@ uses
   Classes,
   SysUtils,
   Uni,
-  provider.connection;
+  provider.connection, SQLDB;
 
 type
 
   { TServicesPizzas }
 
   TServicesPizzas = class(TDataModule)
-    qryPizzas: TUniQuery;
+    qryPizzas: TSQLQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
 
@@ -38,8 +38,9 @@ implementation
 procedure TServicesPizzas.DataModuleCreate(Sender: TObject);
 begin
     vProviders := TProviderConnection.Create(Nil);
-    vProviders.dbsConnection.Connected := True;
-    qryPizzas.Connection := vProviders.dbsConnection;
+    vProviders.dbConnection.Connected := True;
+    qryPizzas.DataBase                := vProviders.dbConnection;
+    qryPizzas.Transaction             := vProviders.dbTransaction;
 end;
 
 procedure TServicesPizzas.DataModuleDestroy(Sender: TObject);

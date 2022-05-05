@@ -11,7 +11,8 @@ uses
   Horse.Jhonson,
   controller.root,
   controllers.pizzas,
-  controllers.post.pizzas;
+  controllers.post.pizzas,
+  controllers.logins;
 
 const
  USER = 'Admin';
@@ -60,6 +61,7 @@ begin
        .Use(Jhonson);
 
    TRoot.registry;
+   TLogin.registry;
    TPizzas.registry;
    TPostPizzas.registry;
 
