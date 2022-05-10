@@ -10,56 +10,74 @@
     <meta name="author" content="Luciano Arantes Filho">
     <meta name="description" content="Site de uma pizzaria Fictícia.">
     <meta name="reply-to" contet="lucianovisky@outlook.com@outlook.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
     <link rel="shortcut icon" href="../img/pizzaria.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/util.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--===============================================================================================-->
 </head>
 
 <body>
+    <div class="limiter">
+        <div class="container-cadastrar">
+            <div class="wrap-cadastrar">
+                <h1 style="text-align: center; margin-top: 25px; color: rgb(167, 125, 49);">Cadastro</h1>
+                <form class="login100-form validate-form p-l-55 p-r-55 p-t-30">
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Nome">
+                        <input class="input100" id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Nome" />
+                    </div>
 
-    <body>
-        <div class="container">
-            <a class="links" id="paracadastro"></a>
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o CPF">
+                        <input class="input100" id="cpf_cad" name="cpf_cad" required="required" type="text" placeholder="CPF" />
+                    </div>
 
-            <!--FORMULÁRIO DE CADASTRO-->
-            <div id="cadastro">
-                <form>
-                    <h1>Cadastro</h1>
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Email">
+                        <input class="input100" id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@mail.com" />
+                    </div>
 
-                    <p>
-                        <label for="nome_cad">Seu nome</label>
-                        <input id="nome_cad" name="nome_cad" required="required" type="text" placeholder="nome" />
-                    </p>
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Senha">
+                        <input class="input100" id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Senha" />
+                    </div>
 
-                    <p>
-                        <label for="email_cad">Seu e-mail</label>
-                        <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com" />
-                    </p>
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Endereco">
+                        <input class="input100" id="Endereco_cad" name="Endereco_cad" required="required" type="text" placeholder="Endereco" />
+                    </div>
 
-                    <p>
-                        <label for="senha_cad">Sua senha</label>
-                        <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 1234" />
-                    </p>
 
-                    <p>
-                        <input type="submit" value="Cadastrar" />
-                    </p>
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+							Cadastrar
+						</button>
+                    </div>
 
-                    <p>
+                    <div class="flex-col-c p-t-40 p-b-40">
                         Já tem conta?
-                        <a href=""> Ir para Login </a>
-                    </p>
+                        <a class="txt1 p-b-9" href="../page/login.html"> Ir para Login </a>
+                    </div>
                 </form>
             </div>
         </div>
-        </div>
-    </body>
+    </div>
 
 </body>
+<!--===============================================================================================-->
+<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/bootstrap/js/popper.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/daterangepicker/moment.min.js"></script>
+<script src="../vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="../vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+<script src="../js/main.js"></script>
 
 </html>

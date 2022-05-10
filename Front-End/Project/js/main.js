@@ -27,6 +27,39 @@ function Logar() {
         }).catch(e => alert('Erro ao efetuar o Login')); //alert.error('EXCEPTION: ', e))
 }
 
+
+
+function Cadastrar() {
+
+    event.preventDefault();
+
+    var usuario = window.document.getElementById("edtUsuario").value;
+    var senha = window.document.getElementById("edtSenha").value;
+
+
+
+    var myHeaders = new Headers();
+    myHeaders.append("X-USER", usuario);
+    myHeaders.append("X-PASS", senha);
+    myHeaders.append("Authorization", "Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6");
+
+    var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+    };
+
+    fetch("http://192.168.10.15:9000/login", requestOptions)
+        .then(async(response) => { // STATUS: 404 OU 500 vai definir ok para false
+            if (response.ok) {
+                return window.location.href = "../Project/page/index.html";
+            } else {
+                alert('Usuário ou Senha inválido')
+            }
+        }).catch(e => alert('Erro ao efetuar o Login')); //alert.error('EXCEPTION: ', e))
+
+}
+
 (function($) {
     "use strict";
 
