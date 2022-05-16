@@ -5,7 +5,7 @@ unit controllers.pizzas;
 interface
 
 uses
-  Classes, SysUtils,fpjson, jsonparser, Horse, DataSet.Serialize;
+  Classes, SysUtils,fpjson, jsonparser, Horse,SQLDB, csvdataset, DB, DataSet.Serialize;
 
 type {TPizzas}
   TPizzas = class
@@ -52,11 +52,37 @@ begin
   end;
 end;
 
+procedure GetCsvPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
+var
+   LServicesPizzas     : TServicesPizzas;
+begin
+  LServicesPizzas := TServicesPizzas.Create(nil);
+  try
+    try
+       LServicesPizzas.qryPizzas.Close;
+       LServicesPizzas.qryPizzas.Open;
+
+       Res.ContentType('application/CSV').Send<TCSVDataset>(LServicesPizzas.SaveToCSV(LServicesPizzas.qryPizzas)).status(200);
+    except
+      on E:exception do
+      begin
+         Res.ContentType('application/json').Send(Format('{"ERROR":"%s"}',[e.message])).status(500);
+      end;
+    end;
+
+  finally
+    FreeAndNil(LServicesPizzas);
+  end;
+end;
+
 { TPizzas }
 
 class procedure TPizzas.registry;
 begin
-  THorse.Get('pizzas', getPizzas);
+  THorse.Group
+  .Prefix('pizzas')
+  .Get('', getPizzas)
+  .Get('csv', GetCsvPizzas);
 end;
 
 end.

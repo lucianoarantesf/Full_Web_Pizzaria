@@ -10,9 +10,9 @@ uses
   Horse.HandleException,
   Horse.Jhonson,
   controller.root,
+  controllers.logins,
   controllers.pizzas,
-  controllers.post.pizzas,
-  controllers.logins;
+  controllers.post.pizzas, controllers.cadastros;
 
 const
  USER = 'Admin';
@@ -61,7 +61,7 @@ begin
        .Use(Jhonson);
 
    TRoot.registry;
-   TLogin;
+   TLogin.registry;
    TPizzas.registry;
    TPostPizzas.registry;
 

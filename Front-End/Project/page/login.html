@@ -104,6 +104,41 @@
     <!--===============================================================================================-->
     <script src="../js/main.js"></script>
 
+    <script src="../js/bootbox/bootbox.all.min.js"></script>
+    <script>
+        function Logar() {
+            event.preventDefault();
+
+            var usuario = window.document.getElementById("edtUsuario").value;
+            var senha = window.document.getElementById("edtSenha").value;
+
+            if (usuario === '' || senha === '') {} else {
+                var myHeaders = new Headers();
+                myHeaders.append("X-USER", usuario);
+                myHeaders.append("X-PASS", senha);
+                myHeaders.append("Authorization", "Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6");
+
+                var requestOptions = {
+                    method: 'GET',
+                    headers: myHeaders,
+                    redirect: 'follow'
+                };
+
+                fetch("http://192.168.10.13:9000/login", requestOptions)
+                    .then(async(response) => { // STATUS: 404 OU 500 vai definir ok para false
+                        if (response.ok) {
+                            return window.location.href = "../page/index.html";
+                        } else {
+                            bootbox.alert('Usuário ou Senha inválido')
+                        }
+                    }).catch(e => bootbox.alert('Erro ao efetuar o Login')); //alert.error('EXCEPTION: ', e))
+            }
+
+
+
+        }
+    </script>
+
 
 </body>
 

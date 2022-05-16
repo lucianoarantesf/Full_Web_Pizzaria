@@ -97,6 +97,16 @@
         <Filename Value="..\controllers\controllers.logins.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\services\services.cadastros.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServicesCadastros"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.cadastros.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

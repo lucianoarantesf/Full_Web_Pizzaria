@@ -3,11 +3,42 @@ object ServicesPizzas: TServicesPizzas
   OnDestroy = DataModuleDestroy
   OldCreateOrder = False
   Height = 182
-  HorizontalOffset = 726
-  VerticalOffset = 214
+  HorizontalOffset = 852
+  VerticalOffset = 78
   Width = 357
   object qryPizzas: TSQLQuery
-    FieldDefs = <>
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'TAGID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'TITLE'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'PIZZA'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'VALOR'
+        DataType = ftFloat
+        Precision = -1
+      end    
+      item
+        Name = 'DETALHE'
+        DataType = ftMemo
+        Precision = -1
+      end>
     Database = ProviderConnection.dbConnection
     Transaction = ProviderConnection.dbTransaction
     SQL.Strings = (
@@ -29,7 +60,7 @@ object ServicesPizzas: TServicesPizzas
       ''
       ''
       ''
-      'ORDER BY TAG_ID,ID'
+      'ORDER BY TAGID,ID'
       ''
       ''
       ''
@@ -54,7 +85,70 @@ object ServicesPizzas: TServicesPizzas
     )
     Params = <>
     Macros = <>
-    Left = 168
-    Top = 64
+    Left = 160
+    Top = 56
+    object qryPizzasID: TMemoField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qryPizzasTAGID: TLongintField
+      FieldKind = fkData
+      FieldName = 'TAGID'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryPizzasTITLE: TMemoField
+      FieldKind = fkData
+      FieldName = 'TITLE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qryPizzasPIZZA: TMemoField
+      FieldKind = fkData
+      FieldName = 'PIZZA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qryPizzasVALOR: TFloatField
+      FieldKind = fkData
+      FieldName = 'VALOR'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Precision = -1
+    end
+    object qryPizzasDETALHE: TMemoField
+      FieldKind = fkData
+      FieldName = 'DETALHE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftMemo
+      Transliterate = False
+    end
   end
 end

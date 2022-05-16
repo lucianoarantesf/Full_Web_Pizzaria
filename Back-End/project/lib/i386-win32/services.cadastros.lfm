@@ -1,0 +1,44 @@
+object ServicesCadastros: TServicesCadastros
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 252
+  HorizontalOffset = 630
+  VerticalOffset = 140
+  Width = 293
+  object qryInserePessoa: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 120
+    Top = 40
+  end
+  object qryInsereCliente: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 120
+    Top = 104
+  end
+  object qryInsereUsuario: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 120
+    Top = 184
+  end
+  object qryBuscaInfo: TSQLQuery
+    MaxIndexesCount = 4
+    FieldDefs = <>
+    Database = ProviderConnection.dbConnection
+    Transaction = ProviderConnection.dbTransaction
+    SQL.Strings = (
+      ''
+      ''
+    )
+    Params = <>
+    Macros = <>
+    Left = 232
+    Top = 40
+  end
+end

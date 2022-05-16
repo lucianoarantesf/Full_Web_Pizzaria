@@ -65,25 +65,20 @@ function EnviarPedido() {
     myHeaders.append("Authorization", "Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6");
     myHeaders.append("Content-Type", "application/json");
 
-    var raw = JSON.stringify(pedido);
+    var Body = JSON.stringify(pedido);
 
     var requestOptions = {
         method: 'POST',
         headers: myHeaders,
-        body: raw,
+        body: Body,
         redirect: 'follow'
     };
 
-    fetch(`http://192.168.10.19:9000/pizzas/post`, requestOptions)
+    fetch(`http://192.168.10.13:9000/pizzas/post`, requestOptions)
         .then(async(response) => {
             response.json()
                 .then(data => {
-                    const verificaPizza = data => data.id == id;
-                    const pizza = data.filter(verificaPizza);
-                    var Pizza = preco[0].pizza;
-                    var Detalhe = preco[0].detalhe;
-                    var Valor = preco[0].valor;
-                    alert('Pizza: ' + Pizza + Detalhe + ' Valor: ' + Valor)
+
                 })
         })
         .catch(alert('Erro: ' + response));
@@ -105,7 +100,7 @@ function preco(tam, tag) {
         headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
     };
 
-    fetch(`http://192.168.10.19:9000/pizzas?id=` + id, options)
+    fetch(`http://192.168.10.13:9000/pizzas?id=` + id, options)
         .then(async(response) => {
             response.json()
                 .then(data => {
@@ -136,7 +131,7 @@ function formaPedido(id, campo) {
         headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
     };
 
-    fetch(`http://192.168.10.19:9000/pizzas?id=` + id, options)
+    fetch(`http://192.168.10.13:9000/pizzas?id=` + id, options)
         .then(async(response) => {
             response.json()
                 .then(data => {

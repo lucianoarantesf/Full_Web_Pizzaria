@@ -458,3 +458,15 @@ iframe {
         padding-right: 15px;
     }
 }
+
+.arrow {
+    border: solid rgb(204, 155, 63);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.left {
+    transform: rotate(135deg);
+    margin: 15px;
+}

@@ -24,26 +24,27 @@
     <div class="limiter">
         <div class="container-cadastrar">
             <div class="wrap-cadastrar">
+                <a href="../page/login.html"><i class="arrow left"></i></a>
                 <h1 style="text-align: center; margin-top: 25px; color: rgb(167, 125, 49);">Cadastro</h1>
-                <form class="login100-form validate-form p-l-55 p-r-55 p-t-30">
+                <form class="login100-form validate-form p-l-55 p-r-55 p-t-30" onsubmit="Cadastrar();">
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Nome">
-                        <input class="input100" id="nome_cad" name="nome_cad" required="required" type="text" placeholder="Nome" />
+                        <input class="input100" id="edt_nome" name="nome_cad" required="required" type="text" placeholder="Nome" />
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o CPF">
-                        <input class="input100" id="cpf_cad" name="cpf_cad" required="required" type="text" placeholder="CPF" />
+                        <input class="input100" id="edt_cpf" name="cpf_cad" required="required" type="text" placeholder="CPF" onkeydown="javascript: fMasc( this, mCPF );" />
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Email">
-                        <input class="input100" id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@mail.com" />
+                        <input class="input100" id="edt_email" name="email_cad" required="required" type="email" placeholder="contato@mail.com" />
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Senha">
-                        <input class="input100" id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Senha" />
+                        <input class="input100" id="edt_senha" name="senha_cad" required="required" type="password" placeholder="Senha" />
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-16" data-validate="Insira o Endereco">
-                        <input class="input100" id="Endereco_cad" name="Endereco_cad" required="required" type="text" placeholder="Endereco" />
+                        <input class="input100" id="edt_endereco" name="Endereco_cad" required="required" type="text" placeholder="Endereco" />
                     </div>
 
 
@@ -51,11 +52,6 @@
                         <button class="login100-form-btn">
 							Cadastrar
 						</button>
-                    </div>
-
-                    <div class="flex-col-c p-t-40 p-b-40">
-                        Já tem conta?
-                        <a class="txt1 p-b-9" href="../page/login.html"> Ir para Login </a>
                     </div>
                 </form>
             </div>
@@ -78,6 +74,116 @@
 <!--===============================================================================================-->
 <script src="../vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
+<!--===============================================================================================-->
 <script src="../js/main.js"></script>
+
+<script src="../js/bootbox/bootbox.all.min.js"></script>
+<script>
+    function Cadastrar() {
+        event.preventDefault();
+
+
+
+
+
+        var nome = window.document.getElementById("edt_nome").value;
+        var cpf = window.document.getElementById("edt_cpf").value;
+        var usuario = window.document.getElementById("edt_email").value;
+        var senha = window.document.getElementById("edt_senha").value;
+        var endereco = window.document.getElementById("edt_endereco").value;
+
+        var validacpf = ValidaCPF();
+
+        if (validacpf === true) {
+            json = {
+                "NOME": nome,
+                "CPF": cpf,
+                "USUARIO": usuario,
+                "SENHA": senha,
+                "ENDERECO": endereco
+            };
+
+            if (nome === '' || cpf === '' ||
+                usuario === '' || senha === '' ||
+                endereco === '') {} else {
+                var myHeaders = new Headers();
+                myHeaders.append("Authorization", "Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6");
+                myHeaders.append("Content-Type", "application/json");
+
+                var Body = JSON.stringify(json);
+
+                var requestOptions = {
+                    method: 'POST',
+                    headers: myHeaders,
+                    body: Body,
+                    redirect: 'follow'
+                };
+
+                fetch(`http://192.168.10.13:9000/cadastros/usuarios`, requestOptions)
+                    .then(async(response) => {
+                        response.json()
+                            .then(data => {
+                                const Result = data => data.retorno === 'OK';
+                                var resultado = data.retorno;
+
+                                if (resultado === 'OK') {
+
+                                    bootbox.confirm({
+                                        title: "Nina Pizzas",
+                                        message: "Usuário Cadastrado",
+                                        buttons: {
+                                            confirm: {
+                                                label: '<i class="fa fa-check"></i> OK'
+                                            }
+                                        },
+                                        callback: function(result) {
+                                            window.location.href = "../page/login.html";
+                                        }
+                                    });
+
+                                } else {
+                                    bootbox.alert('Usuário ou Senha inválido')
+                                }
+                            })
+                    }).catch(e => bootbox.alert('Erro ao efetuar o Login')); //alert.error('EXCEPTION: ', e))
+
+            }
+        } else {
+            bootbox.alert('CPF Inválido.')
+        }
+
+
+
+
+    }
+
+    function ValidaCPF() {
+        var cpf = document.getElementById("edt_cpf").value;
+        var cpfValido = /^(([0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2})|([0-9]{11}))$/;
+        if (cpfValido.test(cpf) == true) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function fMasc(objeto, mascara) {
+        obj = objeto
+        masc = mascara
+        setTimeout("fMascEx()", 1)
+    }
+
+    function fMascEx() {
+        obj.value = masc(obj.value)
+    }
+
+    function mCPF(cpf) {
+        cpf = cpf.replace(/\D/g, "")
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2")
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+        return cpf
+    }
+</script>
 
 </html>

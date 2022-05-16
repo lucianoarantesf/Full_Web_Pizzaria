@@ -5,7 +5,7 @@ object ProviderConnection: TProviderConnection
   VerticalOffset = 129
   Width = 250
   object dbConnection: TSQLite3Connection
-    Connected = True
+    Connected = False
     LoginPrompt = False
     BeforeConnect = dbConnectionBeforeConnect
     BeforeDisconnect = dbConnectionBeforeDisconnect
@@ -17,7 +17,7 @@ object ProviderConnection: TProviderConnection
     Top = 24
   end
   object dbTransaction: TSQLTransaction
-    Active = True
+    Active = False
     Database = dbConnection
     Left = 40
     Top = 24
