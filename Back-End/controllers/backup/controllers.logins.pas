@@ -37,9 +37,10 @@ begin
          qryLogin.Open;
 
          if not (qryLogin.IsEmpty) then
-            Res.ContentType('application/json').Send(Format('{"retorno":"%s"}',['OK'])).status(200)
+            Res.ContentType('application/json').Send('{"retorno":"OK" , "ID_CLIENTE":"'+ qryLogin.FieldByName('ID_PESSOA').AsString+'"}').status(200)
          else
             Res.ContentType('application/json').Send(Format('{"retorno":"%s"}',['Usuáro ou Senha Invalidos'])).status(401);
+
        end;
     except
         on E:exception do

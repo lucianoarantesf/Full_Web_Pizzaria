@@ -125,12 +125,19 @@
                 };
 
                 fetch("http://192.168.10.13:9000/login", requestOptions)
-                    .then(async(response) => { // STATUS: 404 OU 500 vai definir ok para false
-                        if (response.ok) {
-                            return window.location.href = "../page/index.html";
-                        } else {
-                            bootbox.alert('Usuário ou Senha inválido')
-                        }
+                    .then(async(response) => {
+                        response.json()
+                            .then(data => {
+                                const Result = data => data.retorno === 'OK';
+                                var resultado = data.retorno;
+                                var id_pessoa = data.ID_PESSOA;
+                                if (resultado === 'OK') {
+                                    localStorage.setItem("ID_PESSOA", id_pessoa);
+                                    return window.location.href = "../page/index.html";
+                                } else {
+                                    bootbox.alert('Usuário ou Senha inválido')
+                                }
+                            })
                     }).catch(e => bootbox.alert('Erro ao efetuar o Login')); //alert.error('EXCEPTION: ', e))
             }
 

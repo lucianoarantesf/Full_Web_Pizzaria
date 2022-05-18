@@ -5,14 +5,23 @@ unit services.post.pizzas;
 interface
 
 uses
-  Classes, SysUtils,  provider.connection, Uni  ;
+  Classes, SysUtils, provider.connection, SQLDB, BufDataset, DB, Uni,
+  VirtualTable;
 
 type
 
   { TServicesPostPizzas }
 
   TServicesPostPizzas = class(TDataModule)
-    qryInsere: TUniQuery;
+    MemTable: TVirtualTable;
+    MemTabledetalhe: TStringField;
+    MemTableid: TStringField;
+    MemTableID_PESSOA: TLongintField;
+    MemTablepizza: TStringField;
+    MemTablequantidade: TLongintField;
+    MemTablevalor: TFloatField;
+    qryInsere: TSQLQuery;
+    qryBuscaInfo: TSQLQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);
   private
@@ -36,6 +45,9 @@ begin
     vProviders.dbConnection.Connected := True;
     qryInsere.DataBase                := vProviders.dbConnection;
     qryInsere.Transaction             := vProviders.dbTransaction;
+
+    qryBuscaInfo.DataBase                := vProviders.dbConnection;
+    qryBuscaInfo.Transaction             := vProviders.dbTransaction;
 end;
 
 procedure TServicesPostPizzas.DataModuleDestroy(Sender: TObject);

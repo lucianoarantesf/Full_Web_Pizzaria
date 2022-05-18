@@ -26,7 +26,7 @@ object ServicesLogin: TServicesLogin
         ParamType = ptInput
       end>
     Macros = <>
-    Left = 72
-    Top = 85
+    Left = 64
+    Top = 56
   end
 end

@@ -33,6 +33,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="MemDSLaz"/>
+      </Item>
+      <Item>
         <PackageName Value="LCL"/>
       </Item>
       <Item>
@@ -101,6 +104,7 @@
         <Filename Value="..\services\services.cadastros.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="ServicesCadastros"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
       <Unit>
@@ -183,6 +187,15 @@
       </Item>
       <Item>
         <Name Value="ESQLDatabaseError"/>
+      </Item>
+      <Item>
+        <Name Value="RunError(219)"/>
+      </Item>
+      <Item>
+        <Name Value="EInvalidCast"/>
+      </Item>
+      <Item>
+        <Name Value="EConvertError"/>
       </Item>
     </Exceptions>
   </Debugging>

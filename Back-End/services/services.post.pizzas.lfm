@@ -2,15 +2,91 @@ object ServicesPostPizzas: TServicesPostPizzas
   OnCreate = DataModuleCreate
   OnDestroy = DataModuleDestroy
   OldCreateOrder = False
-  Height = 150
+  Height = 250
   HorizontalOffset = 318
   VerticalOffset = 119
-  Width = 150
+  Width = 221
   object qryInsere: TSQLQuery
     FieldDefs = <>
     Params = <>
     Macros = <>
     Left = 64
+    Top = 40
+  end
+  object qryBuscaInfo: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 64
+    Top = 112
+  end
+  object MemTable: TVirtualTable
+    FilterOptions = []
+    Left = 144
     Top = 48
+    Data = {
+      04000000000000000000
+    }
+    object MemTableID_PESSOA: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID_PESSOA'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MemTableid: TStringField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MemTablevalor: TFloatField
+      FieldKind = fkData
+      FieldName = 'valor'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MemTablequantidade: TLongintField
+      FieldKind = fkData
+      FieldName = 'quantidade'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MemTablepizza: TStringField
+      FieldKind = fkData
+      FieldName = 'pizza'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MemTabledetalhe: TStringField
+      FieldKind = fkData
+      FieldName = 'detalhe'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object qryBuscaInfoPedido: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 64
+    Top = 176
   end
 end

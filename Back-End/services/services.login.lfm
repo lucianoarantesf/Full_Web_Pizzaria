@@ -9,7 +9,7 @@ object ServicesLogin: TServicesLogin
   object qryLogin: TSQLQuery
     FieldDefs = <>
     SQL.Strings = (
-      'SELECT * FROM USUARIO'
+      'SELECT ID_PESSOA,USUARIO FROM USUARIO'
       'WHERE UPPER(USUARIO) = UPPER(:USER)'
       'AND   UPPER(SENHA)   = UPPER(:PASS)'
       ''
