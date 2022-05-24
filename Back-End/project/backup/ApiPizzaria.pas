@@ -12,7 +12,7 @@ uses
   controller.root,
   controllers.logins,
   controllers.pizzas,
-  controllers.post.pizzas, controllers.cadastros, memdslaz;
+  controllers.post.pizzas, controllers.cadastros, avecom.utils;
 
 const
  USER = 'Admin';

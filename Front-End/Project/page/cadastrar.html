@@ -119,7 +119,7 @@
                     redirect: 'follow'
                 };
 
-                fetch(`http://192.168.10.13:9000/cadastros/usuarios`, requestOptions)
+                fetch(`http://127.0.0.1:9000/cadastros/usuarios`, requestOptions)
                     .then(async(response) => {
                         response.json()
                             .then(data => {

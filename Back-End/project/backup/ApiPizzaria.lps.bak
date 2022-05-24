@@ -8,8 +8,8 @@
       <Unit>
         <Filename Value="ApiPizzaria.pas"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="11"/>
-        <CursorPos X="49" Y="15"/>
+        <TopLine Value="53"/>
+        <CursorPos X="10" Y="67"/>
         <UsageCount Value="207"/>
         <Loaded Value="True"/>
       </Unit>
@@ -19,9 +19,11 @@
         <ComponentName Value="ProviderConnection"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="70" Y="3"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="3" Y="13"/>
         <UsageCount Value="207"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controller.root.pas"/>
@@ -37,17 +39,20 @@
         <ComponentName Value="ServicesPizzas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="30" Y="11"/>
-        <UsageCount Value="137"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="7"/>
+        <UsageCount Value="144"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="60"/>
-        <CursorPos X="18" Y="83"/>
-        <UsageCount Value="137"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="15"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="144"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -56,24 +61,21 @@
         <ComponentName Value="ServicesPostPizzas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="38"/>
-        <CursorPos X="5" Y="48"/>
-        <UsageCount Value="116"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="36"/>
+        <CursorPos X="35" Y="47"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="23"/>
-        <CursorPos Y="37"/>
-        <UsageCount Value="116"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="50"/>
+        <CursorPos X="35" Y="51"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\services\services.login.pas"/>
@@ -84,7 +86,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="5" Y="15"/>
-        <UsageCount Value="110"/>
+        <UsageCount Value="117"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -93,7 +95,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="32"/>
         <CursorPos X="83" Y="40"/>
-        <UsageCount Value="110"/>
+        <UsageCount Value="117"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -105,7 +107,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="34"/>
         <CursorPos X="47" Y="40"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.cadastros.pas"/>
@@ -113,7 +115,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="35"/>
         <CursorPos Y="77"/>
-        <UsageCount Value="61"/>
+        <UsageCount Value="68"/>
       </Unit>
       <Unit>
         <Filename Value="..\services\services.logins.pas"/>
@@ -259,7 +261,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos Y="13"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -281,15 +283,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="204"/>
         <CursorPos Y="213"/>
-        <UsageCount Value="10"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
-      </Unit>
-      <Unit>
-        <Filename Value="modules\horse\src\Horse.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="35"/>
-        <CursorPos X="3" Y="43"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -345,40 +339,19 @@
         <UsageCount Value="9"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="47"/>
+        <CursorPos X="42" Y="51"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="66" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="67" TopLine="53"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="69" TopLine="55"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="40" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="42" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="43" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="44" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="45" TopLine="32"/>
-      </Position>
       <Position>
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
         <Caret Line="46" TopLine="32"/>
@@ -467,6 +440,37 @@
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
         <Caret Line="43" TopLine="32"/>
       </Position>
+      <Position>
+        <Filename Value="..\services\services.post.pizzas.pas"/>
+        <Caret Line="48" Column="5" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.post.pizzas.pas"/>
+        <Caret Line="47" Column="35" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
+        <Caret Line="22" Column="24" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="ApiPizzaria.pas"/>
+        <Caret Line="67" Column="10" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <Caret Line="11" Column="3" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
+        <Caret Line="19" Column="85" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="..\services\services.pizzas.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
+        <Caret Line="44" Column="62" TopLine="16"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -494,7 +498,7 @@
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Line Value="79"/>
+        <Line Value="77"/>
       </Item>
     </BreakPoints>
   </Debugging>

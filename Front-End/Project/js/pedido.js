@@ -78,7 +78,7 @@ function EnviarPedido() {
         redirect: 'follow'
     };
 
-    fetch(`http://192.168.10.13:9000/pizzas/post`, requestOptions)
+    fetch(`http://127.0.0.1:9000/pizzas/post`, requestOptions)
         .then(async(response) => {
             response.json()
                 .then(data => {
@@ -126,7 +126,7 @@ function preco(tam, tag) {
         headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
     };
 
-    fetch(`http://192.168.10.13:9000/pizzas?id=` + id, options)
+    fetch(`http://127.0.0.1:9000/pizzas?id=` + id, options)
         .then(async(response) => {
             response.json()
                 .then(data => {
@@ -156,7 +156,7 @@ function formaPedido(id, campo) {
         headers: { 'Authorization': 'Basic QWRtaW46QWFTbEDDp1EqaFQldlFNcHZ6' }
     };
 
-    fetch(`http://192.168.10.13:9000/pizzas?id=` + id, options)
+    fetch(`http://127.0.0.1:9000/pizzas?id=` + id, options)
         .then(async(response) => {
             response.json()
                 .then(data => {
