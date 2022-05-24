@@ -13,6 +13,7 @@ type
   TProviderConnection = class(TDataModule)
     dbConnection: TSQLite3Connection;
     dbTransaction: TSQLTransaction;
+    procedure dbConnectionAfterConnect(Sender: TObject);
     procedure dbConnectionBeforeConnect(Sender: TObject);
     procedure dbConnectionBeforeDisconnect(Sender: TObject);
   private
@@ -36,6 +37,10 @@ implementation
 procedure TProviderConnection.dbConnectionBeforeConnect(Sender: TObject);
 begin
   CoInitialize(nil);
+end;
+
+procedure TProviderConnection.dbConnectionAfterConnect(Sender: TObject);
+begin
 end;
 
 procedure TProviderConnection.dbConnectionBeforeDisconnect(Sender: TObject);

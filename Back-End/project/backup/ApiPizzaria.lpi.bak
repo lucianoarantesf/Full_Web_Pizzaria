@@ -111,10 +111,6 @@
         <Filename Value="..\controllers\controllers.cadastros.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
-      <Unit>
-        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -125,7 +121,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers;C:\HORSE\modules\JSON4D\;C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\"/>
+      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers;C:\HORSE\modules\JSON4D\"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

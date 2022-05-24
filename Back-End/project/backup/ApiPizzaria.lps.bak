@@ -19,6 +19,7 @@
         <ComponentName Value="ProviderConnection"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <CursorPos X="3" Y="13"/>
         <UsageCount Value="207"/>
@@ -40,7 +41,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="7"/>
+        <TopLine Value="28"/>
+        <CursorPos X="76" Y="36"/>
         <UsageCount Value="144"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -341,21 +343,14 @@
       </Unit>
       <Unit>
         <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="47"/>
-        <CursorPos X="42" Y="51"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="90" Y="24"/>
         <UsageCount Value="21"/>
-        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
-        <Caret Line="46" TopLine="32"/>
-      </Position>
+    <JumpHistory HistoryIndex="25">
       <Position>
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
         <Caret Line="48" TopLine="34"/>
@@ -449,10 +444,6 @@
         <Caret Line="47" Column="35" TopLine="36"/>
       </Position>
       <Position>
-        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
-        <Caret Line="22" Column="24" TopLine="8"/>
-      </Position>
-      <Position>
         <Filename Value="ApiPizzaria.pas"/>
         <Caret Line="67" Column="10" TopLine="53"/>
       </Position>
@@ -461,15 +452,7 @@
         <Caret Line="11" Column="3" TopLine="15"/>
       </Position>
       <Position>
-        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
-        <Caret Line="19" Column="85" TopLine="13"/>
-      </Position>
-      <Position>
         <Filename Value="..\services\services.pizzas.pas"/>
-      </Position>
-      <Position>
-        <Filename Value="C:\AvecomSVN\arquivos\projetos\Class_Avecom_Horse\Class_Back_End\avecom.utils.pas"/>
-        <Caret Line="44" Column="62" TopLine="16"/>
       </Position>
     </JumpHistory>
     <RunParams>
