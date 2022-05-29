@@ -18,7 +18,7 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="2"/>
+      <BuildNr Value="4"/>
       <StringTable Comments="Api Pizzaria" CompanyName="Api Pizzaria" FileDescription="Api Pizzaria" ProductName="Api Pizzaria"/>
     </VersionInfo>
     <BuildModes>
@@ -111,6 +111,10 @@
         <Filename Value="..\controllers\controllers.cadastros.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -121,7 +125,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers;C:\HORSE\modules\JSON4D\"/>
+      <OtherUnitFiles Value="..\providers;modules\.dcp;modules\.dcu;modules;modules\dataset-serialize\src;modules\handle-exception\src;modules\horse\src;modules\horse-basic-auth\src;modules\horse-compression\src;modules\horse-cors\src;modules\horse-octet-stream\src;modules\jhonson\src;..\services;..\controllers;C:\Componentes\Lazarus_utils\j4l\;..\database"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Parsing>

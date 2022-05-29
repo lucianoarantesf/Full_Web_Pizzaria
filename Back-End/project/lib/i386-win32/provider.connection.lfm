@@ -7,9 +7,10 @@ object ProviderConnection: TProviderConnection
   object dbConnection: TSQLite3Connection
     Connected = False
     LoginPrompt = False
+    AfterConnect = dbConnectionAfterConnect
     BeforeConnect = dbConnectionBeforeConnect
     BeforeDisconnect = dbConnectionBeforeDisconnect
-    DatabaseName = 'C:\TrabalhosFaculdade\Trabalho Final Luciano\Fontes\Back-End\database\dbsPizza.db3'
+    DatabaseName = 'C:\database\dbsPizza.db3'
     KeepConnection = False
     Transaction = dbTransaction
     AlwaysUseBigint = False

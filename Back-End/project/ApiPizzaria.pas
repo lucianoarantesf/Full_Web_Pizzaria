@@ -12,7 +12,9 @@ uses
   controller.root,
   controllers.logins,
   controllers.pizzas,
-  controllers.post.pizzas, controllers.cadastros;
+  controllers.post.pizzas,
+  controllers.cadastros,
+  controllers.acomp.pedidos;
 
 const
  USER = 'Admin';
@@ -65,6 +67,7 @@ begin
    TPizzas.registry;
    TPostPizzas.registry;
    TCadastros.registry;
+   TAcomPedidos.registry;
 
    THorse.Listen(9000, OnListen);
 end.

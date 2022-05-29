@@ -1,161 +1,198 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Karma", sans-serif;
-}
-
-#logo {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    margin: 0px 0px 0px 20px;
-}
-
-.bg-orange {
-    background-color: rgb(255, 192, 74);
-}
-
-
-/*INDEX*/
-
-.box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.coluna {
-    column-count: 2;
-}
-
-.cardapio-center {
-    display: inline-block;
-    width: auto;
-    text-align: center!important
-}
-
-
-/* FOOTER */
-
-.LinkBlack {
-    color: rgb(127, 96, 37);
-}
-
-.rodape {
-    background-color: rgb(255, 192, 74);
-}
-
-.redes-sociais {
-    list-style: none;
-    display: inline-flex;
-    text-align-last: center;
-    margin: 0.5cm 0cm 0cm 0cm;
-    color: white;
-}
-
-footer nav .redes-sociais li {
-    list-style: none;
-    margin: 0px 10px 0px 10px;
-}
-
-footer nav .redes-sociais li a img {
-    max-width: 35px;
-}
-
-
-/*CARDÁPIO*/
-
-.cardapio-padding {
-    padding-top: 10px!important;
-    padding-bottom: 10px!important
-}
-
-.cardapio-center {
-    display: inline-block;
-    width: auto;
-    text-align: center!important
-}
-
-.Grid-Cardapio {
-    float: left;
-    width: 100%;
-    padding: 0% 3%;
-}
-
-
-/*RESPONSIVIDADE*/
-
-@media (min-width:600px) {
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Karma", sans-serif;
+    }
+    
+    #logo {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        margin: 0px 0px 0px 20px;
+    }
+    
+    .bg-orange {
+        background-color: rgb(255, 192, 74);
+    }
+    /*INDEX*/
+    
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .coluna {
+        column-count: 2;
+    }
+    
+    .cardapio-center {
+        display: inline-block;
+        width: auto;
+        text-align: center!important
+    }
+    /* FOOTER */
+    
+    .LinkBlack {
+        color: rgb(127, 96, 37);
+    }
+    
+    .rodape {
+        background-color: rgb(255, 192, 74);
+    }
+    
+    .redes-sociais {
+        list-style: none;
+        display: inline-flex;
+        text-align-last: center;
+        margin: 0.5cm 0cm 0cm 0cm;
+        color: white;
+    }
+    
+    footer nav .redes-sociais li {
+        list-style: none;
+        margin: 0px 10px 0px 10px;
+    }
+    
+    footer nav .redes-sociais li a img {
+        max-width: 35px;
+    }
+    /*CARDÁPIO*/
+    
+    .cardapio-padding {
+        padding-top: 10px!important;
+        padding-bottom: 10px!important
+    }
+    
+    .cardapio-center {
+        display: inline-block;
+        width: auto;
+        text-align: center!important
+    }
+    
     .Grid-Cardapio {
-        width: 33%;
-    }
-}
-
-@media (max-width:600px) {
-    .Grid-Cardapio {
+        float: left;
         width: 100%;
-        padding: 0% 8%;
+        padding: 0% 3%;
     }
-}
-
-
-/* PEDIDO */
-
-.Grid-Pedido {
-    float: left;
-    width: 100%;
-    padding: 0% 3%;
-    text-align: center;
-    display: inline;
-}
-
-.img-pedido {
-    border-radius: 25%;
-    float: left;
-    padding: 0% 3%;
-}
-
-
-/*RESPONSIVIDADE*/
-
-@media (min-width:800px) {
+    /*RESPONSIVIDADE*/
+    
+    @media (min-width:600px) {
+        .Grid-Cardapio {
+            width: 33%;
+        }
+    }
+    
+    @media (max-width:600px) {
+        .Grid-Cardapio {
+            width: 100%;
+            padding: 0% 8%;
+        }
+    }
+    /* PEDIDO */
+    
+    .Grid-Pedido {
+        float: left;
+        width: 100%;
+        padding: 0% 3%;
+        text-align: center;
+        display: inline;
+    }
+    
     .img-pedido {
-        width: 100%;
-        margin: 8px 8px 8px 8px;
+        border-radius: 25%;
+        float: left;
+        padding: 0% 3%;
     }
-}
-
-@media (max-width:800px) {
-    .img-pedido {
-        width: 100%;
-        margin: 2px 2px 2px 2px;
+    /*RESPONSIVIDADE*/
+    
+    @media (min-width:800px) {
+        .img-pedido {
+            width: 100%;
+            margin: 8px 8px 8px 8px;
+        }
     }
-}
-
-
-/*BOTÃO FLUTUANTE  FONTE: https://velhobit.com.br/design/fab-botao-flutuante-com-css3-e-html-sem-javascript.html*/
-
-.btnTopo {
-    position: fixed;
-    float: bottom;
-    bottom: 15px;
-    right: 10px;
-    z-index: 100;
-}
-
-.btnCircular {
-    border-radius: 50%;
-    background-color: rgb(218, 154, 35);
-    font-size: 12px;
-    padding: 25px;
-}
-
-.gif-pizzadelivery {
-    border-radius: 18%;
-    margin: 2rem;
-    width: 80%;
-}
+    
+    @media (max-width:800px) {
+        .img-pedido {
+            width: 100%;
+            margin: 2px 2px 2px 2px;
+        }
+    }
+    /*BOTÃO FLUTUANTE  FONTE: https://velhobit.com.br/design/fab-botao-flutuante-com-css3-e-html-sem-javascript.html*/
+    
+    .btnTopo {
+        position: fixed;
+        float: bottom;
+        bottom: 15px;
+        right: 10px;
+        z-index: 100;
+    }
+    
+    .btnCircular {
+        border-radius: 50%;
+        background-color: rgb(218, 154, 35);
+        font-size: 12px;
+        padding: 25px;
+    }
+    
+    .gif-pizzadelivery {
+        border-radius: 18%;
+        margin: 2rem;
+        width: 80%;
+    }
+    
+    details {
+        border: 1px solid rgb(218, 154, 35);
+        border-radius: 4px;
+        padding: .5em .5em 0;
+    }
+    
+    summary {
+        font-weight: bold;
+        margin: -.5em -.5em 0;
+        padding: .5em;
+    }
+    
+    details[open] {
+        padding: .5em;
+    }
+    
+    details[open] summary {
+        border-bottom: 1px solid rgb(218, 154, 35);
+        margin-bottom: .5em;
+    }
+    
+    .c-loader {
+        animation: is-rotating 1s infinite;
+        border: 6px solid #d0cfcf;
+        border-radius: 50%;
+        border-top-color: rgb(218, 154, 35);
+        height: 100px;
+        width: 100px;
+        margin: auto;
+        margin-top: 100px;
+    }
+    
+    @keyframes is-rotating {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    
+    hr {
+        margin: 40px 0;
+    }
+    
+    .hr1 {
+        border: 0;
+        border-top: 1px solid #CCC;
+    }
+    
+    #acomp-pedido-details {
+        margin-top: 15px;
+    }
