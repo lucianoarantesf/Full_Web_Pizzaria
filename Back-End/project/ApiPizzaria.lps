@@ -8,11 +8,10 @@
       <Unit>
         <Filename Value="ApiPizzaria.pas"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="39"/>
-        <CursorPos X="4" Y="70"/>
+        <TopLine Value="51"/>
+        <CursorPos X="14" Y="7"/>
         <UsageCount Value="207"/>
         <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\providers\provider.connection.pas"/>
@@ -21,7 +20,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="4"/>
         <CursorPos X="3" Y="13"/>
         <UsageCount Value="207"/>
@@ -43,19 +42,20 @@
         <ComponentName Value="ServicesPizzas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="28"/>
-        <CursorPos X="76" Y="36"/>
-        <UsageCount Value="151"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="27"/>
+        <CursorPos Y="57"/>
+        <UsageCount Value="153"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="55"/>
-        <CursorPos X="21" Y="12"/>
-        <UsageCount Value="151"/>
+        <TopLine Value="54"/>
+        <CursorPos X="4" Y="57"/>
+        <UsageCount Value="153"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
@@ -65,20 +65,17 @@
         <ComponentName Value="ServicesPostPizzas"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="30"/>
         <CursorPos Y="56"/>
-        <UsageCount Value="130"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="132"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.post.pizzas.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="19" Y="36"/>
-        <UsageCount Value="130"/>
+        <UsageCount Value="132"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -90,7 +87,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="5" Y="15"/>
-        <UsageCount Value="124"/>
+        <UsageCount Value="126"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -99,7 +96,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="32"/>
         <CursorPos X="83" Y="40"/>
-        <UsageCount Value="124"/>
+        <UsageCount Value="126"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -111,7 +108,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="34"/>
         <CursorPos X="47" Y="40"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="77"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
@@ -120,18 +117,16 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="35"/>
         <CursorPos Y="77"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="77"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="58"/>
         <CursorPos Y="72"/>
-        <UsageCount Value="26"/>
-        <Loaded Value="True"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
+        <UsageCount Value="28"/>
       </Unit>
       <Unit>
         <Filename Value="..\services\services.logins.pas"/>
@@ -376,126 +371,22 @@
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
+    <JumpHistory HistoryIndex="3">
       <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="67" TopLine="59"/>
+        <Filename Value="ApiPizzaria.pas"/>
+        <Caret Line="20" TopLine="56"/>
       </Position>
       <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="98" TopLine="86"/>
+        <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <Caret Line="55" Column="23" TopLine="54"/>
       </Position>
       <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="94" Column="52" TopLine="88"/>
+        <Filename Value="..\controllers\controllers.pizzas.pas"/>
+        <Caret Line="57" Column="4" TopLine="54"/>
       </Position>
       <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="97" TopLine="88"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="95" TopLine="88"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="102" TopLine="88"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="101" TopLine="88"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="72" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="71" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="69" Column="27" TopLine="66"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="64" TopLine="63"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="68" Column="74" TopLine="43"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="32" TopLine="15"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="74" Column="39" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="58" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="60" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="72" TopLine="58"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="73" TopLine="59"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="67" Column="78" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="97" Column="39" TopLine="84"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="72" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="73" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="64" TopLine="56"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="71" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="66" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="71" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="66" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="71" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="66" TopLine="57"/>
-      </Position>
-      <Position>
-        <Filename Value="..\controllers\controllers.acomp.pedidos.pas"/>
-        <Caret Line="72" Column="62" TopLine="58"/>
+        <Filename Value="..\services\services.pizzas.pas"/>
+        <Caret Line="57" TopLine="27"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -5,7 +5,7 @@ unit controllers.pizzas;
 interface
 
 uses
-  Classes, SysUtils,fpjson, jsonparser, Horse,SQLDB, csvdataset, DB, DataSet.Serialize;
+  Classes, SysUtils,fpjson, jsonparser, Horse,SQLDB, DataSet.Serialize;
 
 type {TPizzas}
   TPizzas = class
@@ -62,7 +62,7 @@ begin
        LServicesPizzas.qryPizzas.Close;
        LServicesPizzas.qryPizzas.Open;
 
-       Res.ContentType('application/CSV').Send<TCSVDataset>(LServicesPizzas.SaveToCSV(LServicesPizzas.qryPizzas)).status(200);
+       Res.ContentType('application/CSV').Send(LServicesPizzas.SaveToCSV(LServicesPizzas.qryPizzas)).status(200);
     except
       on E:exception do
       begin
@@ -82,7 +82,7 @@ begin
   THorse.Group
   .Prefix('pizzas')
   .Get('', getPizzas)
-  .Get('csv', GetCsvPizzas);
+  .Get('pdf', getPdfPizzas);
 end;
 
 end.

@@ -52,7 +52,7 @@ begin
   end;
 end;
 
-procedure GetCsvPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
+procedure getPdfPizzas(Req : THorseRequest; Res : THorseResponse; Next: TNextProc);
 var
    LServicesPizzas     : TServicesPizzas;
 begin
@@ -82,7 +82,7 @@ begin
   THorse.Group
   .Prefix('pizzas')
   .Get('', getPizzas)
-  .Get('csv', GetCsvPizzas);
+  .Get('pdf', getPdfPizzas);
 end;
 
 end.
